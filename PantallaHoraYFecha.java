@@ -8,9 +8,9 @@ public class PantallaHoraYFecha {
 
     public PantallaHoraYFecha() 
     {
-        dia = new PantallaDosDigitos(0,30);
-        mes = new PantallaDosDigitos(0,12);
-        ano = new PantallaDosDigitos(0,99);
+        dia = new PantallaDosDigitos(0,29);
+        mes = new PantallaDosDigitos(0,11);
+        ano = new PantallaDosDigitos(0,98);
         horas = new PantallaDosDigitos(0,24);
         minutos = new PantallaDosDigitos(0,60);
     }
