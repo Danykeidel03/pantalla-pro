@@ -29,23 +29,23 @@ public class PantallaHoraYFecha {
         if (minutos.getValorAlmacenado() == 0){
             horas.incrementaValorAlmacenado();
             if (horas.getValorAlmacenado() == 0){
-            dia.incrementaValorAlmacenado();
-            if (dia.getValorAlmacenado() == 1){
-            mes.incrementaValorAlmacenado();
-            if (mes.getValorAlmacenado() == 1){
-            ano.incrementaValorAlmacenado();
-        }
-        }
-        }
+                dia.incrementaValorAlmacenado();
+                if (dia.getValorAlmacenado() == 1){
+                    mes.incrementaValorAlmacenado();
+                    if (mes.getValorAlmacenado() == 1){
+                        ano.incrementaValorAlmacenado();
+                    }
+                }
+            }
         }
 
     }
 
-    public void setHora(int minutos1, int horas2, int dia3, int mes4, int ano5) {
-        minutos.setValorAlmacenado(minutos1);
-        horas.setValorAlmacenado(horas2);
-        dia.setValorAlmacenado(dia3);
-        mes.setValorAlmacenado(mes4);
-        ano.setValorAlmacenado(ano5);
+    public void setHora(int newMinutos, int newHoras, int newDia, int newMes, int newAno) {
+        minutos.setValorAlmacenado(newMinutos);
+        horas.setValorAlmacenado(newHoras);
+        dia.setValorAlmacenado(newDia);
+        mes.setValorAlmacenado( newMes);
+        ano.setValorAlmacenado(newAno);
     }
 }  
