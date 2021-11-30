@@ -16,32 +16,36 @@ public class PantallaHoraYFecha {
     }
 
     public String getFecha() {
-        String fechaExacta = minutos.getTextoDeLaPantalla() + ":" + horas.getTextoDeLaPantalla() + dia.getTextoDeLaPantalla() + "-" + mes.getTextoDeLaPantalla() + "-" + ano.getTextoDeLaPantalla();
+        String fechaExacta = horas.getTextoDeLaPantalla() + ":" + minutos.getTextoDeLaPantalla() + " " + dia.getTextoDeLaPantalla() + "-" + mes.getTextoDeLaPantalla() + "-" + ano.getTextoDeLaPantalla();
         return fechaExacta;
     }
 
+    /**
+     * Método avanzarMinuto
+     *
+     */
     public void avanzarMinuto() {   
         minutos.incrementaValorAlmacenado();
         if (minutos.getValorAlmacenado() == 0){
             horas.incrementaValorAlmacenado();
-        }
-        if (horas.getValorAlmacenado() == 0){
+            if (horas.getValorAlmacenado() == 0){
             dia.incrementaValorAlmacenado();
-        }
-        if (dia.getValorAlmacenado() == 0){
+            if (dia.getValorAlmacenado() == 1){
             mes.incrementaValorAlmacenado();
-        }
-        if (mes.getValorAlmacenado() == 0){
+            if (mes.getValorAlmacenado() == 1){
             ano.incrementaValorAlmacenado();
+        }
+        }
+        }
         }
 
     }
 
-    public void setHora(int numero1, int numero2, int numero3, int numero4, int numero5) {
-        minutos.setValorAlmacenado(numero1);
-        horas.setValorAlmacenado(numero2);
-        dia.setValorAlmacenado(numero3);
-        mes.setValorAlmacenado(numero4);
-        ano.setValorAlmacenado(numero5);
+    public void setHora(int minutos1, int horas2, int dia3, int mes4, int ano5) {
+        minutos.setValorAlmacenado(minutos1);
+        horas.setValorAlmacenado(horas2);
+        dia.setValorAlmacenado(dia3);
+        mes.setValorAlmacenado(mes4);
+        ano.setValorAlmacenado(ano5);
     }
 }  
